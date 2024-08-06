@@ -35,7 +35,7 @@ async def single_prediction(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error getting house price: {str(e)}")
 
-@app.post("/v1/check_house_prices/bulk_prediction")
+@app.post("/v1/check_house_price/bulk_prediction")
 async def bulk_prediction(file: UploadFile = File(...)):
     try:
         # Checking which file extension so as to read the file accordingly
